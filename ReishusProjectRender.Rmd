@@ -12,8 +12,12 @@ knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE)
 library('dplyr')
 library('ggplot2')
 library('tidyverse')
+```
 
+```{r, read-data, echo=FALSE}
 hw3<-read.csv(file ='data.csv',na.strings=c("", "NA"))
+```
+```{r, make-table}
 ggplot(hw3, aes(x=DATESTAMP, y=C_New)) + 
   geom_bar(stat = "identity") +
   ggtitle("Daily New Cases of COVID-19 in Georgia") +
