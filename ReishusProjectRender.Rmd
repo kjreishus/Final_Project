@@ -16,7 +16,7 @@ library(tidyverse)
 ```
 ```{r, load-data}
 #load and clean data
-projectdata<-read.csv(file ='Georgia_COVID-19_Case_Data.csv',na.strings=c("", "NA"))
+projectdata<-read.csv(file ='RawData.csv',na.strings=c("", "NA"))
 hw3<- projectdata %>%
   mutate(DATESTAMP=as.Date(DATESTAMP))
 hw3<-subset(hw3, COUNTY=="ALL GEORGIA")
