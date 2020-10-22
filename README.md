@@ -1,4 +1,4 @@
-## For my project, I will analyze the `Georgia_COVID-19_Case_Data.csv` data included in this repository. 
+## For my project, I will analyze the `RawData.csv` data included in this repository. 
 
 To analyze the data you will need to install some `R` packages. The required packages can be installed using `R` commands.
 
