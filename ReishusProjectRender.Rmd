@@ -33,7 +33,7 @@ ggplot(hw3, aes(x=DATESTAMP, y=C_New)) +
 The highest daily case count to date is `r max(hw3$C_New, na.rm = TRUE)`. The state has been collecting data on daily case count for `r nrow(hw3)` days. 
 
 <!--
-Render html file Rscript -e "rmarkdown::render('HW3.Rmd')"
+Render html file Rscript -e "rmarkdown::render('ReishusProjectRender.Rmd')"
 
 Participation grades:
 Andrea Cool: 1
