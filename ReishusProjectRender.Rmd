@@ -1,0 +1,24 @@
+---
+title: "Daily Incidence of Cases of COVID-19 in Georgia"
+author: "Katelin Reishus"
+date: "`r format(Sys.Date(), '%Y-%m-%d')`"
+output: 
+  html_document:
+    highlights: "breezedark"
+---
+
+```{r}
+library('dplyr')
+library('ggplot2')
+library('tidyverse')
+
+hw3<-read.csv(file ='data.csv',na.strings=c("", "NA"))
+ggplot(hw3, aes(x=DATESTAMP, y=C_New)) + 
+  geom_bar(stat = "identity") +
+  ggtitle("Daily New Cases of COVID-19 in Georgia") +
+  xlab("Date") + ylab("Number of New Cases")
+```
+
+## Summary
+
+The highest daily case count to date is `r max(hw3$C_New, na.rm = TRUE)`. The state has been collecting data on daily case count for `r nrow(hw3)` days. 
