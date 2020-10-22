@@ -10,9 +10,9 @@ install.packages("tidyverse")
 
 ##Execute the analysis
 
-To execute the analysis, from the project folder you need to download the data set `Georgia_COVID-19_Case_Data.csv`. Then run:
+To execute the analysis, from the project folder you need to download the data set `RawData.csv`. Then run:
 ``` bash
-Rscript -e "rmarkdown::render('HW3.Rmd')"
+Rscript -e "rmarkdown::render('ReishusProjectRender.Rmd')"
 ```
 
-This will create a file called `HW3.html` output in your directory that contains the results.
+This will create a file called `ReishusProjectRender.html` output in your directory that contains the results.
