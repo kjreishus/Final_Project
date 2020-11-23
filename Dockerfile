@@ -15,7 +15,7 @@ RUN mkdir /reishus_project/report
 COPY ./ /reishus_project/
 
 #make R scripts executable
-RUN chmod +x /reishus_project/R/*.R
+RUN chmod +x /reishus_project/*.R
 
 # make container entry point bash
 CMD make -C reishus_project
