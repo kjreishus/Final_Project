@@ -2,14 +2,13 @@ FROM rocker/tidyverse
 
 # install R packages
 
-RUN Rscript -e "install.packages('dplyr', repos = 'http://cran.us.r-project.org')"
-RUN Rscript -e "install.packages('ggplot2', repos ='http://cran.us.r-project.org')"
-RUN Rscript -e "install.packages('tidyverse', repos = 'http://cran.us.r-project.org')"
+RUN Rscript -e "install.packages('dplyr')"
+RUN Rscript -e "install.packages('ggplot2')"
+RUN Rscript -e "install.packages('tidyverse')"
 
 # make a directory for the project in the docker container
 
 RUN mkdir /project
-RUN mkdir /project/report
 
 # copy contents of local folder to project directory in container
 COPY ./ /project/
