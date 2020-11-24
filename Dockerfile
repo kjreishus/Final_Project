@@ -8,14 +8,14 @@ RUN Rscript -e "install.packages('tidyverse', repos = 'http://cran.us.r-project.
 
 # make a directory for the project in the docker container
 
-RUN mkdir /reishus_project
-RUN mkdir /reishus_project/report
+RUN mkdir /project
+RUN mkdir /project/report
 
 # copy contents of local folder to project directory in container
-COPY ./ /reishus_project/
+COPY ./ /project/
 
 #make R scripts executable
-RUN chmod +x /reishus_project/*.R
+RUN chmod +x /project/*.R
 
 # make container entry point bash
-CMD make -C reishus_project
+CMD make -C project
