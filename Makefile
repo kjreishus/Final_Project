@@ -9,7 +9,7 @@ build: Dockerfile
 	docker build -t kjreishus/ex_proj .
 
 #rule for cleaning data
-data.csv: cleandata.R RawData.csv
+data.csv: R/cleandata.R RawData.csv
 	chmod +x R/cleandata.R && \
 	Rscript R/cleandata.R
 
