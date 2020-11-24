@@ -1,22 +1,22 @@
 #rule for making report
-report.html: data.csv ReishusProjectRender.Rmd
-	Rscript -e "rmarkdown::render('ReishusProjectRender.Rmd', output_file = '../report.html')"
+report.html: data.csv R/ReishusProjectRender.Rmd
+	Rscript -e "rmarkdown::render('R/ReishusProjectRender.Rmd', output_file = '../output/report.html')"
 
 
 #build docker image
 .PHONY:build
 build: Dockerfile
-	docker build -t image .
+	docker build -t kjreishus/ex_proj .
 
 #rule for cleaning data
 data.csv: cleandata.R RawData.csv
-	chmod +x cleandata.R && \
-	Rscript cleandata.R
+	chmod +x R/cleandata.R && \
+	Rscript R/cleandata.R
 
 #rule for installing packages
 install:
-	chmod +x InstallPackages.R && \
-	Rscript InstallPackages.R
+	chmod +x R/InstallPackages.R && \
+	Rscript R/InstallPackages.R
 
 #rule for help
 .PHONY: help
