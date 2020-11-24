@@ -21,13 +21,9 @@ To download the Docker image from DockerHub in Terminal, run
 ```
 docker pull kjreishus/ex_proj
 ```
-You can also build a local docker image from the project folder but executing the following command
-```
-make build
-```
 
-To execute the analysis in a Docker container after downloading a built Docker image from DockerHub, make sure you are in a current folder and run
+To generate the final report, run the following command to mount your local directory to the directory in the Docker container
 ```
-docker run -v /localpath/report.html:/project/report kjreishus/ex_proj
+docker run -v /localpath:/project/output kjreishus/ex_proj
 ```
 Note: the "localpath" is the path where you saved the project directory.
