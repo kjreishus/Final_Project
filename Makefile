@@ -1,7 +1,7 @@
 
 #rule for making report
 ReishusProjectRender.html: data.csv ReishusProjectRender.Rmd
-	Rscript -e "rmarkdown::render('ReishusProjectRender.Rmd', output_file_'../output/reishus_project_report.html)" 
+	Rscript -e "rmarkdown::render('ReishusProjectRender.Rmd', output_file_'../report/ReishusProjectRender.html')" 
 
 #build docker image
 .PHONY:build
